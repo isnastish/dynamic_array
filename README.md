@@ -3,6 +3,13 @@
 Usage example:
 
 ```cpp
+#include "dynamic_array.h"
+#include <iostream>
+
+//
+// NOTE: Auxiliary functions and macros:
+//
+
 template<class T>
 static void out(const Array<T>& arr){
 	for (int32_t index = 0; 
@@ -47,9 +54,6 @@ out_itr(arr);\
 std::cout << #arr ": [";\
 out(arr);\
 }
-
-#include "dynamic_array.h"
-#include <iostream>
 
 int main(int argc, char **argv)
 {

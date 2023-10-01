@@ -190,13 +190,13 @@ struct Array
 
 	DataType& operator[](int32_t index)
 	{
-		assert(index < size);
+		assert((index >= 0) && (index < size));
 		return data[index];
 	}
 
 	const DataType& operator[](int32_t index) const
 	{
-		assert(index < size);
+		assert((index >= 0) && (index < size));
 		return data[index];
 	}
 
@@ -205,7 +205,7 @@ struct Array
 		return &data[0];
 	}
 
-	Iterator end() // points one past last element
+	Iterator end()
 	{
 		return &data[size];
 	}
